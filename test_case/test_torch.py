@@ -3,7 +3,7 @@ import math
 
 dtype = torch.float
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(device)
+print(f'Torch use device: {device}')
 
 # Create Tensors to hold input and outputs.
 # By default, requires_grad=False, which indicates that we do not need to
@@ -54,3 +54,5 @@ for t in range(2000):
         d.grad = None
 
 print(f'Result: y = {a.item()} + {b.item()} x + {c.item()} x^2 + {d.item()} x^3')
+
+print('Finish of test PyTorch')

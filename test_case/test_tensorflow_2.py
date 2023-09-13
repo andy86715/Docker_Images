@@ -5,7 +5,7 @@ TensorFlow 2 quickstart for beginners
 # https://www.tensorflow.org/tutorials/quickstart/beginner
 import tensorflow as tf
 print("TensorFlow version:", tf.__version__)
-print(tf.test.is_gpu_available())
+print(f'GPU is: {tf.test.is_gpu_available()}')
 
 mnist = tf.keras.datasets.mnist
 
@@ -42,3 +42,5 @@ probability_model = tf.keras.Sequential([
 ])
 
 probability_model(x_test[:5])
+
+print('Finish of test TensorFlow 2.0')
