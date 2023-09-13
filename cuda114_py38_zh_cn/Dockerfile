@@ -2,6 +2,8 @@ FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu18.04
 
 # software-properties-common -> python 3.8
 # libsm6, libxrender-dev, libxext6, libgl1 -> opencv
+# libpq-dev -> psycopg2
+# libzbar0 -> pyzbar
 # tzdata -> time
 # locales -> en_US.UTF-8
 RUN apt -y update \ 
