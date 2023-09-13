@@ -3,6 +3,8 @@ import fitz
 import filetype
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
+from pyzbar.pyzbar import decode
 
 # read image
 image = cv2.imread('../data/test.jpg')
@@ -36,3 +38,6 @@ kp2, des2 = sift.detectAndCompute(img2,None)
 bf = cv2.BFMatcher()
 matches = bf.knnMatch(des1,des2,k=2)
 print(len(matches))
+
+# barcode
+print(decode(Image.open('../data/code128.png')))

@@ -5,6 +5,7 @@ TensorFlow 2 quickstart for beginners
 # https://www.tensorflow.org/tutorials/quickstart/beginner
 import tensorflow as tf
 print("TensorFlow version:", tf.__version__)
+print(tf.test.is_gpu_available())
 
 mnist = tf.keras.datasets.mnist
 
