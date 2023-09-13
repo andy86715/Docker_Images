@@ -18,7 +18,11 @@ RUN apt -y update \
         libpq-dev \
         libzbar0 \
         tzdata \
-        locales
+        locales \
+        libksba8=1.3.5-2ubuntu0.18.04.2 \
+        libssl1.1=1.1.1-1ubuntu2.1~18.04.23 \
+        linux-libc-dev=4.15.0-213.224 \
+        openssl=1.1.1-1ubuntu2.1~18.04.23
 
 # python3.8 env
 RUN yes '' | add-apt-repository ppa:deadsnakes/ppa
