@@ -10,7 +10,7 @@ sess_options = onnxruntime.SessionOptions()
 sess_options.intra_op_num_threads = 15
 sess_options.inter_op_num_threads = 1
 
-ort_session = onnxruntime.InferenceSession("../model/craft.onnx", sess_options=sess_options, providers= ['CPUExecutionProvider'])
+ort_session = onnxruntime.InferenceSession("../model/craft.onnx", sess_options=sess_options, providers= ['CUDAExecutionProvider'])
 ort_inputs = {ort_session.get_inputs()[0].name: onnx_runtime_input}
 t1 = datetime.now()
 ort_outs = ort_session.run(None, ort_inputs)

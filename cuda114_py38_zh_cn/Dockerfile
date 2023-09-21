@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.3-cudnn8-runtime-ubuntu18.04
+FROM nvcr.io/nvidia/cuda:11.4.0-cudnn8-runtime-ubuntu18.04
 
 # software-properties-common -> python 3.8
 # libsm6, libxrender-dev, libxext6, libgl1 -> opencv
