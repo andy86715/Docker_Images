@@ -1,8 +1,7 @@
-FROM nvcr.io/nvidia/cuda:11.4.3-cudnn8-runtime-ubi8
+FROM nvidia/cuda:11.4.3-cudnn8-runtime-ubi8
 
 # install prerequisites
-RUN yum update -y && yum install -y wget tar binutils make
-RUN yum install -y libcudnn8-devel-8.2.2.26-1.cuda11.4
+RUN yum install -y wget tar binutils make
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 
 # opencv
@@ -25,7 +24,10 @@ RUN cd Python-3.8.8 \
     && make -j2 && make install -j2 \
     && ln -s /usr/local/python3/bin/python3.8 /usr/bin/python3 \
     && ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
-RUN pip3 install pip==21.2.1
+
+# security scan
+RUN pip3 install pip==23.3
+Run pip3 install setuptools==65.5.1
 
 # timezone
 RUN TZ=Asia/Taipei \
