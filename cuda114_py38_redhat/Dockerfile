@@ -27,7 +27,7 @@ RUN cd Python-3.8.8 \
 
 # security scan
 RUN pip3 install pip==23.3
-Run pip3 install setuptools==65.5.1
+RUN pip3 install setuptools==65.5.1
 
 # timezone
 RUN TZ=Asia/Taipei \
