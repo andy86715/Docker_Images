@@ -8,6 +8,7 @@
 
 # Pillow==10.0.0 要升版
 
+'''
 paddle2onnx --model_dir ./inference/ch_ppocr_mobile_v2.0_cls_infer \
 --model_filename inference.pdmodel \
 --params_filename inference.pdiparams \
@@ -16,9 +17,15 @@ paddle2onnx --model_dir ./inference/ch_ppocr_mobile_v2.0_cls_infer \
 --input_shape_dict="{'x':[-1,3,-1,-1]}" \
 --enable_onnx_checker True
 
-python3 tools/infer/predict_system.py --use_gpu=False --use_onnx=True \
+python3 tools/infer/predict_system.py --use_gpu=True --use_onnx=True \
 --det_model_dir=./inference/det_onnx/model.onnx  \
 --rec_model_dir=./inference/rec_onnx/model.onnx  \
 --cls_model_dir=./inference/cls_onnx/model.onnx  \
 --image_dir=doc/imgs_en/img_12.jpg \
 --rec_char_dict_path=ppocr/utils/en_dict.txt
+'''
+
+import paddle
+gpu_available  = paddle.device.is_compiled_with_cuda()
+print("GPU available:", gpu_available)
+

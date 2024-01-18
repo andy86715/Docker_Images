@@ -4,6 +4,7 @@ TensorFlow 2 quickstart for beginners
 
 # https://www.tensorflow.org/tutorials/quickstart/beginner
 import tensorflow as tf
+from tensorflow.keras.optimizers.legacy import Adam
 print("TensorFlow version:", tf.__version__)
 print(f'GPU is: {tf.test.is_gpu_available()}')
 
@@ -28,7 +29,7 @@ loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
 loss_fn(y_train[:1], predictions).numpy()
 
-model.compile(optimizer='adam',
+model.compile(optimizer=Adam(),
               loss=loss_fn,
               metrics=['accuracy'])
 
