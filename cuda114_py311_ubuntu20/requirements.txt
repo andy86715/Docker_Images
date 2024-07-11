@@ -1,4 +1,4 @@
-torch==1.13.1
+torch==2.0.1
 tensorflow==2.12.1
 onnxruntime-gpu==1.15.1
 opencv-python==4.7.0.72
@@ -11,3 +11,4 @@ Pillow==9.2.0
 paddlepaddle-gpu==2.5.2
 # paddle2onnx==1.1.0
 # Pillow==10.0.1
+pyopenjtalk

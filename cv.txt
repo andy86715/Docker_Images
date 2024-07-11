@@ -1,0 +1,27 @@
+# prerequisites
+build-essential
+cmake
+software-properties-common
+libssl-dev
+openssl
+wget
+tzdata
+locales
+
+# opencv
+libsm6
+libxrender-dev
+libxext6
+libgl1
+
+# psycopg2
+libpq-dev
+
+# zbar
+libzbar0
+
+# python
+zlib1g
+zlib1g-dev
+libffi-dev
+libsqlite3-dev
