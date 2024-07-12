@@ -17,8 +17,8 @@ jobs:
       - name: Generate tarball from image
         id: buildx
         run: |
-          docker pull andy86715/python3.11-cuda11.4.3-cudnn8-ubuntu20.04:v2
-          docker save -o vuln-image.tar andy86715/python3.11-cuda11.4.3-cudnn8-ubuntu20.04:v2
+          docker pull andy86715/python3.11-cuda11.4.3-cudnn8-ubuntu20.04:v3
+          docker save -o vuln-image.tar andy86715/python3.11-cuda11.4.3-cudnn8-ubuntu20.04:v3
  
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
@@ -28,4 +28,4 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH, MEDIUM, LOW, UNKNOWN'
+          severity: 'CRITICAL, HIGH, MEDIUM, LOW, UNKNOWN'
