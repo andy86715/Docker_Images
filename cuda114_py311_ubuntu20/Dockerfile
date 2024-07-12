@@ -2,6 +2,7 @@ FROM nvidia/cuda:11.4.3-cudnn8-runtime-ubuntu20.04
 
 # install prerequisites
 COPY packages.txt .
+COPY torch-2.0.1-cp311-cp311-manylinux1_x86_64.whl .
 RUN apt -y update
 RUN DEBIAN_FRONTEND=noninteractive xargs apt install -y <packages.txt
 
@@ -15,7 +16,6 @@ RUN make altinstall
 RUN rm -rf /usr/bin/python3 /usr/bin/python3.8
 RUN ln -s /usr/local/bin/python3.11 /usr/bin/python3
 RUN ln -s /usr/local/bin/pip3.11 /usr/bin/pip3
-RUN pip3 install torch==2.0.1
 
 WORKDIR ../
 RUN rm -rf Python-3.11.7 Python-3.11.7.tgz
