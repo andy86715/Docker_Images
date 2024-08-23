@@ -16,7 +16,7 @@ RUN make altinstall
 RUN rm -rf /usr/bin/python3 /usr/bin/python3.8
 RUN ln -s /usr/local/bin/python3.11 /usr/bin/python3
 RUN ln -s /usr/local/bin/pip3.11 /usr/bin/pip3
-RUN pip3 install pip==23.3
+RUN pip3 install pip==24.2
 RUN pip3 install setuptools==65.5.1
 
 WORKDIR ../

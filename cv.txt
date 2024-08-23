@@ -20,6 +20,10 @@ libpq-dev
 # zbar
 libzbar0
 
+# pandas
+libbz2-dev
+liblzma-dev
+
 # python
 zlib1g
 zlib1g-dev

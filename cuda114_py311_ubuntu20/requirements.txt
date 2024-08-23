@@ -12,3 +12,4 @@ paddlepaddle-gpu==2.5.2
 # paddle2onnx==1.1.0
 # Pillow==10.0.1
 pyopenjtalk
+pandas==1.3.5

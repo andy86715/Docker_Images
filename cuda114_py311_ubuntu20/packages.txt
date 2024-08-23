@@ -8,9 +8,11 @@ gcc
 gfortran
 libatlas-base-dev
 libblas-dev
+libbz2-dev
 libffi-dev
 libgl1
 liblapack-dev
+liblzma-dev
 libopenblas-dev
 libpq-dev
 libsm6
